@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <android.support.v7.widget.CardView
+        android:id="@+id/id_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+    />
+
+    <RelativeLayout
+        android:id="@+id/id_relative_layout_card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCardView"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/id_incident_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IncidentNo"
+                android:layout_gravity="end"/>
+
+            <TextView
+                android:id="@+id/id_incident_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:text="Title"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="18sp"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/id_incident_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requestor" />
+
+            <TextView
+                android:id="@+id/id_incident_request_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RequestDate" />
+
+            <TextView
+                android:id="@+id/id_incident_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category" />
+
+            <TextView
+                android:id="@+id/id_incident_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
