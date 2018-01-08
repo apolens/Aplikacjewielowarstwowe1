@@ -30,7 +30,6 @@ public class FragmentResolveIncidentDetail extends Fragment
         etRequestor = (EditText) view.findViewById(R.id.id_form_requestor);
         etRequestDate = (EditText) view.findViewById(R.id.id_form_requestDate);
         sPriority = (Spinner) view.findViewById(R.id.id_form_priority);
-        sAssignTo = (Spinner) view.findViewById(R.id.id_form_assign_to);
         etTitle = (EditText) view.findViewById(R.id.id_form_title);
         etDescription = (EditText) view.findViewById(R.id.id_form_description);
         etSolution = (EditText) view.findViewById(R.id.id_form_solution);
@@ -70,14 +69,6 @@ public class FragmentResolveIncidentDetail extends Fragment
             }
         }
 
-        for(int i = 0; i < sAssignTo.getAdapter().getCount(); i++)
-        {
-            if(sAssignTo.getAdapter().getItem(i).toString().equals(dataIncident.getAssignTo()))
-            {
-                sAssignTo.setSelection(i);
-            }
-        }
-
         etTitle.setText(dataIncident.getTitle());
         etDescription.setText(dataIncident.getDescription());
         etSolution.setText(dataIncident.getSolution());
@@ -88,7 +79,6 @@ public class FragmentResolveIncidentDetail extends Fragment
         etRequestor.setEnabled(false);
         etRequestDate.setEnabled(false);
         sPriority.setEnabled(false);
-        sAssignTo.setEnabled(false);
         etTitle.setEnabled(false);
         etDescription.setEnabled(false);
         etSolution.setEnabled(true);

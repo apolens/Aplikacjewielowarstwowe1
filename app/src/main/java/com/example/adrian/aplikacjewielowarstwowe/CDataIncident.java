@@ -8,7 +8,6 @@ public class CDataIncident implements Serializable
     private String category;
     private String priority;
     private String status;
-    private String assignTo;
     private String requestor;
     private String requestDate;
     private String title;
@@ -16,13 +15,12 @@ public class CDataIncident implements Serializable
     private String solution;
     private String comment;
 
-    public CDataIncident(String incidentId, String category, String priority, String status, String assignTo, String requestor, String requestDate, String title, String description, String solution, String comment)
+    public CDataIncident(String incidentId, String category, String priority, String status, String requestor, String requestDate, String title, String description, String solution, String comment)
     {
         this.incidentId = incidentId;
         this.category = category;
         this.priority = priority;
         this.status = status;
-        this.assignTo = assignTo;
         this.requestor = requestor;
         this.requestDate = requestDate;
         this.title = title;
@@ -69,16 +67,6 @@ public class CDataIncident implements Serializable
     public void setStatus(String status)
     {
         this.status = status;
-    }
-
-    public String getAssignTo()
-    {
-        return assignTo;
-    }
-
-    public void setAssignTo(String assignTo)
-    {
-        this.assignTo = assignTo;
     }
 
     public String getRequestor() {

@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class ActivityMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
@@ -33,6 +34,11 @@ public class ActivityMain extends AppCompatActivity implements NavigationView.On
         dlNavigation = (DrawerLayout) findViewById(R.id.id_main_drawer_layout);
         nvNavigation = (NavigationView) findViewById(R.id.nav_view);
 
+        View viewNav =  nvNavigation.getHeaderView(0);
+
+        tvNameUser = (TextView) viewNav.findViewById(R.id.id_data_user);
+        tvLoginUser = (TextView) viewNav.findViewById(R.id.id_login_user);
+
         setSupportActionBar(tToolbar);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, dlNavigation, tToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -43,7 +49,19 @@ public class ActivityMain extends AppCompatActivity implements NavigationView.On
 
         nvNavigation.setNavigationItemSelectedListener(this);
 
+        setNavHeader();
+
         setMainFragment();
+    }
+
+    private void setNavHeader()
+    {
+        String nameUser = getIntent().getStringExtra("first_name");
+        String surnameUser = getIntent().getStringExtra("last_name");
+        String loginUser = getIntent().getStringExtra("login");
+
+        tvNameUser.setText(nameUser + " " + surnameUser);
+        tvLoginUser.setText(loginUser);
     }
 
     @Override

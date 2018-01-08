@@ -131,8 +131,8 @@ public class FragmentActiveIncident extends Fragment
         {
             ArrayList incidentList = new ArrayList<>();
 
-            CDataIncident cDataIncidentExampleData1 = new CDataIncident("No356985", "Desktop problem", "High", "In progress", "lukasz.ostrowski", "jKowalski", "2017-06-27 13:00:00", "Komputer się nie uruchamia", "Blue screen", "Wymiana RAM", "");
-            CDataIncident cDataIncidentExampleData2 = new CDataIncident("No156985", "App problem", "Medium", "Open", "lukasz.ostrowski", "pNowak", "2017-06-28 14:25:00", "Aplikacja się nie uruchamia", "Komunikat o braku uprawnień", "Nadanie uprawnień dla konta użytkownika", "");
+            CDataIncident cDataIncidentExampleData1 = new CDataIncident("No356985", "Desktop problem", "High", "In progress", "jKowalski", "2017-06-27 13:00:00", "Komputer się nie uruchamia", "Blue screen", "Wymiana RAM", "");
+            CDataIncident cDataIncidentExampleData2 = new CDataIncident("No156985", "App problem", "Medium", "Open", "pNowak", "2017-06-28 14:25:00", "Aplikacja się nie uruchamia", "Komunikat o braku uprawnień", "Nadanie uprawnień dla konta użytkownika", "");
 
             CItemListIncident cItemListIncidentExample1 = new CItemListIncident(cDataIncidentExampleData1);
             CItemListIncident cItemListIncidentExample2 = new CItemListIncident(cDataIncidentExampleData2);
